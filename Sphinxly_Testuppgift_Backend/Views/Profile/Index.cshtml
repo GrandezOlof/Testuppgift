@@ -14,7 +14,8 @@
     @Html.ActionLink("Read About GDPR -The right to be forgotten", "GDPR")<br />
     @Html.ActionLink("Home", "Index")<br /><br />
 
-    @Html.ActionLink("GDPR - Forget me!", "DeleteVisitor", new { name = Model.Name })<br />
+    @Html.ActionLink("GDPR - Forget me/ Delete me!", "DeleteVisitor", new { name = Model.Name },
+                            new { onclick = "return confirm('Are you sure you want to delete?');" })<br />
 
 }
 

@@ -126,6 +126,7 @@ namespace Sphinxly_Testuppgift_Backend.Controllers
             List<Visitor> visitors = ConvertVisitor(csvData);
             int countRemove = visitors.RemoveAll(v => v.Name == name);
             
+
             if(countRemove > 0)
             {
                 csvData = CreateCsv(visitors);
