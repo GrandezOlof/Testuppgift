@@ -29,50 +29,7 @@ namespace Sphinxly_Testuppgift_Backend.Controllers
             }
             return View();
         }
-
-
-
-        private void Save(List<VisitorViewModel> persons)
-        {
-            // sparas på bin\Debug\   Filen hamnar i samma mapp där programmet körs.
-            var path = Server.MapPath("Customer.txt"); // Sparas inne i min project så att andra användare kan få tillgång till det
-            using (StreamWriter sw = System.IO.File.CreateText(path))
-            {
-                foreach (var person in persons)
-                {
-                    sw.WriteLine(person); //skriver till filen
-                    // person som är av typen Person() anropar på sin ToString() och bli en sträng istället.
-                }
-                sw.Close(); // Stänger filen
-            }
-        }
-
-        //public void SaveToCSV()
-        //{
-        //    StringWriter sw = new StringWriter();
-        //    sw.WriteLine("\"Name\"");
-
-        //    Response.ClearContent();
-        //    Response.AddHeader("content-disposition", "attachment;filename=Exported_Users.csv");
-        //    Response.ContentType = "text/csv";
-
-        //    var customers = VisitorViewModel.customersList();
-
-        //    foreach (var customer in customers)
-        //    {
-        //        sw.WriteLine(string.Format("\"{0}\"", customer.Name));
-        //    }
-        //    Response.Write(sw.ToString());
-        //    Response.End();
-
-        //}
-
-
-        //[HttpGet]
-        //public ActionResult GDPR()
-        //{
-        //    return View();
-        //}
+        
 
     }
 }
