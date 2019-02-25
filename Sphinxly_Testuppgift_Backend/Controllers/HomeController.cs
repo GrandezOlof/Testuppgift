@@ -30,6 +30,6 @@ namespace Sphinxly_Testuppgift_Backend.Controllers
             return View();
         }
         
-
+        //
     }
 }
